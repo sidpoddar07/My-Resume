@@ -1,100 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Siddhant's Resume</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Siddhant Poddar - Computer Science (Cybersecurity) Undergraduate & AI Security Researcher. Resume and portfolio showcasing AegisPay-AI and security engineering projects.">
+  <meta name="author" content="Siddhant Poddar">
+  <title>Siddhant Poddar — Interactive Resume & Portfolio</title>
+  <style>
+    :root {
+      --bg-body: #f4f6f9;
+      --bg-card: #ffffff;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --text-light: #6b7280;
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e2e8f0;
+      --badge-bg: #eff6ff;
+      --badge-text: #1e40af;
+      --badge-border: #bfdbfe;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --radius: 8px;
+    }
 
-    <body>
-        <h1>Siddhant Poddar</h1>
-        <img src="./Sidd.png" height="150" alt="Siddhant">
-        <h2>Profile</h2>
-        <p>
-            Computer Science (Cyber Security) undergraduate with strong interest in Full Stack Development, scalable web applications, and problem solving. Experienced in developing web-based applications and automation solutions using Java, Python, SQL, HTML, CSS, and JavaScript. Passionate about building user-focused products, writing clean code, and learning modern web technologies. Strong foundation in data structures, algorithms, object-oriented programming, and collaborative software development.
-        </p><hr/>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        <h2>Technical Skills</h2>
-        <p>
-            <ul>
-                <li>Technical skill : Java, Python, SQL, C, JavaScript</li>
-                <li>Full Stack Development</li>
-                <li>Tools : Git, Github, VS Code, Linux</li>
-                <li>Cloud & Emerging Security: AWS Fundamentals, IAM, Cloud Concepts</li>
-                <li>Security Tools: Nmap, Wireshark, Burp Suite</li>
-                <li>Networking & Systems: Linux, Windows, DNS, HTTP, TCP/IP</li>
-                <li>Core CS : DSA in Python, Object-Oriented Programming, DBMS</li>
-            </ul>
-        </p><hr/>
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: "Times New Roman", Times, "Liberation Serif", serif;
+      line-height: 1.45;
+      font-size: 10.5pt;
+      padding: 30px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        <h2>Projects</h2>
-        
-        <h3>Linux Automation Toolkit</h3>
-        <p>
-            <ul>
-                <li>Developed multiple Bash scripts to automate file management, system monitoring, and routine administrative tasks.</li>
-                <li>Reduced repetitive manual operations through scripting-based automation.</li>
-                <li>Strengthened debugging, scripting, and system-level problem-solving skills.</li>
-                <li>Improved accuracy and accessibility of attendance management through a centralized dashboard.</li>
-            </ul>
-        </p>
-        
-        <h3>Smart Attendance Management System</h3>
-        <p>
-            <ul>
-                <li>Designed and developed a web-based attendance management application to automate attendance tracking and reduce manual effort..</li>
-                <li>Implemented user authentication, attendance recording, and report generation features.</li>
-                <li>Integrated MySQL database for efficient storage and retrieval of attendance records.</li>
-                <li>Improved accuracy and accessibility of attendance management through a centralized dashboard.</li>
-            </ul>
-        </p>
+    /* Top Floating Action Bar */
+    .action-bar {
+      max-width: 860px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-card);
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
-        <h3>Data Analysis of Astronomical Datasets</h3>
-        <p>
-            <ul>
-                <li>Analyzed large-scale astronomical datasets to identify meaningful patterns and trends.</li>
-                <li>Performed data cleaning, preprocessing, and structured analysis.</li>
-                <li>Created reports and visual representations to communicate findings effectively.</li>
-            </ul>
-        </p><hr/>
+    .action-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        <h2>Education</h2>
-        <p>
-            <ul>
-                <li>Higher Secondary (12th) <br/>
-                    Kendriya Vidyalaya2020 – 2022 | 74.20%
-                </li>
-            </ul>
-        </p>
-        <p>
-            <ul>
-                <li>B.Tech – CS (Cyber Security) <br/>
-                    Dayananda Sagar University 2023 – 2027
-                </li>
-            </ul>
-        </p><hr/>
+    .action-badge {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
 
-        <h2>Language</h2>
-        <p>
-            <ul>
-                <li>English</li>
-                <li>Hindi</li>
-            </ul>
-        </p><hr/>
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+    }
 
-        <h2>Certifications</h2>
-        <p>
-            <ul>
-                <li>Full Stack WEB Development</li>
-                <li>Introduction to Ethical Hacking Principles by IBM</li>
-                <li>Fundamentals of Information Security by Infosys</li>
-                <li>Fundamentals of Cryptography by Infosys</li>
-                <li>Comptia Security+ (Ongoing)</li>
-                <li>AWS Cloud Practitioner (Planned)</li>
-            </ul>
-        </p><hr/>
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      border: none;
+    }
 
-        <a href="./contact.html">Contact Me</a>
-        <footer><p>© Siddhant Poddar. All Rights Reserved.</p></footer>
-        
-    </body>
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e293b;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background-color: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    /* Resume Document Container */
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      padding: 44px 52px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    /* Links */
+    a {
+      color: var(--text-main);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .header-name {
+      font-size: 26pt;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 6px;
+      line-height: 1.1;
+    }
+
+    .header-contact {
+      font-size: 9.8pt;
+      color: #222222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sep {
+      color: #666666;
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 13px;
+      margin-bottom: 2px;
+    }
+
+    .section-header {
+      border-bottom: 1.4px solid #000000;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 11.4pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000000;
+    }
+
+    /* Summary */
+    .summary-content {
+      font-size: 9.9pt;
+      text-align: justify;
+      line-height: 1.42;
+      color: #111111;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .skill-row {
+      font-size: 9.7pt;
+      line-height: 1.36;
+      text-align: justify;
+    }
+
+    .skill-label {
+      font-weight: bold;
+      color: #000000;
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 9px;
+    }
+
+    .project:last-child {
+      margin-bottom: 1px;
+    }
+
+    .project-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .project-name {
+      font-size: 10.3pt;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .flagship-badge {
+      font-size: 7.8pt;
+      font-weight: bold;
+      color: #1e40af;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 1px 5.5px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .project-meta {
+      font-size: 9.4pt;
+      color: #333333;
+      margin-bottom: 3.5px;
+    }
+
+    .project-meta em {
+      font-style: italic;
+      color: #222222;
+    }
+
+    ul.project-bullets {
+      list-style-type: disc;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+
+    ul.project-bullets li {
+      font-size: 9.6pt;
+      line-height: 1.38;
+      margin-bottom: 2.8px;
+      text-align: justify;
+      color: #111111;
+    }
+
+    code {
+      font-family: "Consolas", "Courier New", Courier, monospace;
+      font-size: 8.9pt;
+      background: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Education */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.9pt;
+      line-height: 1.38;
+      margin-bottom: 3.5px;
+    }
+
+    .edu-degree {
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .edu-institution {
+      font-style: italic;
+      color: #222222;
+    }
+
+    .edu-year {
+      font-size: 9.7pt;
+      color: #000000;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    /* Certifications */
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+      font-size: 9.7pt;
+      line-height: 1.38;
+    }
+
+    .cert-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cert-item {
+      display: inline-flex;
+      align-items: baseline;
+    }
+
+    .bullet-dot {
+      margin-right: 5px;
+      font-size: 8pt;
+    }
+
+    /* Footer */
+    .site-footer {
+      max-width: 860px;
+      margin: 24px auto 0 auto;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-light);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .site-footer a {
+      color: var(--text-muted);
+    }
+
+    /* Print Styles */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 7mm 12mm 7mm 12mm;
+      }
+
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .action-bar, .site-footer {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 12px 8px;
+      }
+
+      .resume-wrapper {
+        padding: 24px 18px;
+      }
+
+      .header-name {
+        font-size: 20pt;
+      }
+
+      .header-contact {
+        font-size: 9pt;
+        gap: 4px;
+      }
+
+      .edu-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .edu-year {
+        text-align: left;
+        margin-top: 2px;
+      }
+
+      .cert-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .action-bar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+      }
+
+      .action-buttons {
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Floating Action Bar -->
+  <div class="action-bar">
+    <div class="action-title">
+      <span class="action-badge"></span>
+      <span>Siddhant Poddar &bull; Official Resume & Portfolio</span>
+    </div>
+    <div class="action-buttons">
+      <a href="./Siddhant_Poddar_Resume.pdf" class="btn btn-primary" download="Siddhant_Poddar_Resume.pdf">
+        📥 Download PDF
+      </a>
+      <button onclick="window.print()" class="btn btn-outline">
+        🖨️ Print
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Resume Card -->
+  <main class="resume-wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="header-name">Siddhant Poddar</h1>
+      <div class="header-contact">
+        <span><a href="mailto:siddhantpoddar48@gmail.com">siddhantpoddar48@gmail.com</a></span>
+        <span class="sep">|</span>
+        <span><a href="tel:+918811922513">+91-8811922513</a></span>
+        <span class="sep">|</span>
+        <span><a href="https://www.linkedin.com/in/siddhant-poddar/" target="_blank">linkedin.com/in/siddhant-poddar</a></span>
+        <span class="sep">|</span>
+        <span><a href="https://github.com/sidpoddar07" target="_blank">github.com/sidpoddar07</a></span>
+        <span class="sep">|</span>
+        <span>Bangalore, India</span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Professional Summary</h2>
+      </div>
+      <div class="summary-content">
+        Computer Science (Cybersecurity) undergraduate with strong foundations in application security, network defense, cryptography, and secure backend engineering. Experienced in developing zero-trust API security gateways, automated Linux administration tools, and database-driven systems using Python, Java, SQL, and FastAPI. Proficient in threat modeling, vulnerability identification (OWASP Top 10), and packet inspection, with a demonstrated ability to translate complex security requirements into reliable, high-performance software solutions.
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">• Programming & Scripting:</span> Python, Java, C, JavaScript, SQL, Bash / Shell Scripting
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">• Cybersecurity & Networking:</span> Application Security (OWASP Top 10), Network Security, Cryptography (AES, RSA, HMAC-SHA256), Zero-Trust Architecture, Role-Based Access Control (RBAC), TCP/IP Protocols, Packet Analysis
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">• Security Tools & Platforms:</span> Wireshark, Burp Suite, Nmap, Linux/Unix Security, Postman, Git, GitHub, VS Code
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">• Backend & Architecture:</span> FastAPI, RESTful APIs, Asynchronous I/O (asyncio), Pydantic, Object-Oriented Design, System Architecture
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">• Cloud & Databases:</span> AWS Fundamentals (IAM, VPC, S3), MySQL, PostgreSQL, In-Memory Data Structures, Secure API Gateways
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <!-- Project 1: AegisPay-AI -->
+      <article class="project">
+        <div class="project-title-row">
+          <div>
+            <span class="project-name">AegisPay-AI — Zero-Trust Security Mesh & Payment Firewall for AI Agents</span>
+            <span class="flagship-badge">Flagship</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <em>GitHub:</em> <a href="https://github.com/sidpoddar07/AegisPay-AI" target="_blank"><strong>github.com/sidpoddar07/AegisPay-AI</strong></a> &nbsp;|&nbsp; <em>Tech Stack: Python, FastAPI, Pydantic, React, Vite, Cryptography, Pytest</em>
+        </div>
+        <ul class="project-bullets">
+          <li>Engineered a high-throughput, in-flight Zero-Trust security gateway that intercepts autonomous AI agent payment requests before touching payment gateway APIs (e.g., Razorpay).</li>
+          <li>Designed an <strong>In-Flight Cascaded Architecture</strong> achieving a mean latency of <code>0.036 ms</code> (&lt; 1ms SLA) by combining pre-compiled regex automata, Shannon entropy obfuscation detection, and bidirectional intent divergence algorithms.</li>
+          <li>Implemented a <strong>Cryptographic Proof-of-Intent (PoI) Token</strong> using time-bound (60s TTL) HMAC-SHA256 to eliminate in-flight Man-In-The-Middle (MITM) parameter tampering and amount inflation attacks.</li>
+          <li>Developed a 3-tier composite risk matrix with an adaptive <strong><code>REVIEW</code> band</strong> (Risk 30–74) to trigger Step-Up 2FA challenges, reducing false-positive checkout drops.</li>
+          <li>Built an automated regulatory compliance engine that synthesizes <strong>RBI-AML/PMLA-compliant Suspicious Activity Reports (SAR)</strong> sealed with SHA-256 tamper-evident integrity hashes.</li>
+          <li>Achieved <strong>100% test coverage (32/32 passing tests)</strong> and created a real-time Cyber SOC Dashboard with live penetration attack simulation.</li>
+        </ul>
+      </article>
+
+      <!-- Project 2: Smart Attendance -->
+      <article class="project">
+        <div class="project-title-row">
+          <span class="project-name">Smart Attendance Management System</span>
+        </div>
+        <div class="project-meta">
+          <em>Tech Stack: Python, Web Technologies, MySQL, RBAC, REST APIs</em>
+        </div>
+        <ul class="project-bullets">
+          <li>Developed a secure web-based attendance automation platform reducing manual operational overhead by 80%.</li>
+          <li>Implemented robust session-based authentication, Role-Based Access Control (RBAC), and parameterized SQL queries to safeguard student data against injection attacks.</li>
+          <li>Architected a centralized reporting dashboard with optimized indexing for high-speed attendance record retrieval.</li>
+        </ul>
+      </article>
+
+      <!-- Project 3: Linux Automation -->
+      <article class="project">
+        <div class="project-title-row">
+          <span class="project-name">Linux Automation & Infrastructure Toolkit</span>
+        </div>
+        <div class="project-meta">
+          <em>Tech Stack: Bash, Shell Scripting, Linux System Administration, Cron</em>
+        </div>
+        <ul class="project-bullets">
+          <li>Engineered modular Bash automation utilities for automated log rotation, resource threshold alerting, and background task scheduling.</li>
+          <li>Implemented defensive scripting patterns with automated error-handling traps, permission auditing, and secure file integrity checks.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-row">
+        <div>
+          <span class="edu-degree">B.Tech in Computer Science (Cyber Security)</span> &nbsp;|&nbsp; <span class="edu-institution">Dayananda Sagar University, Bangalore</span>
+        </div>
+        <div class="edu-year">2023 – 2027</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <span class="edu-degree">Higher Secondary Certificate (12th)</span> &nbsp;|&nbsp; <span class="edu-institution">Kendriya Vidyalaya</span>
+        </div>
+        <div class="edu-year">2020 – 2022 | Score: 74.20%</div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & TRAININGS -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Certifications & Trainings</h2>
+      </div>
+      <div class="cert-list">
+        <div class="cert-row">
+          <span class="cert-item"><span class="bullet-dot">•</span> <strong>IBM Ethical Hacking Principles</strong></span>
+          <span class="sep">|</span>
+          <span class="cert-item"><span class="bullet-dot">•</span> <strong>Fundamentals of Information Security</strong></span>
+          <span class="sep">|</span>
+          <span class="cert-item"><span class="bullet-dot">•</span> <strong>Fundamentals of Cryptography</strong></span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-item"><span class="bullet-dot">•</span> <strong>CompTIA Security+</strong>&nbsp;<em>(In Progress)</em></span>
+          <span class="sep">|</span>
+          <span class="cert-item"><span class="bullet-dot">•</span> <strong>AWS Cloud Practitioner</strong>&nbsp;<em>(In Progress)</em></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Siddhant Poddar &bull; <a href="https://github.com/sidpoddar07/My-Resume" target="_blank">Source Code on GitHub</a></p>
+  </footer>
+
+</body>
 </html>
